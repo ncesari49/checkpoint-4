@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "@assets/styles/AddCompany.css";
 import axios from "axios";
+import PropsTypes from "prop-types";
 
-function AddCompany() {
+function AddCompany({ handlerComponentAdd }) {
   const [companyName, setCompanyName] = useState();
   const [description, setDescription] = useState();
   const [localisation, setLocalisation] = useState();
@@ -54,10 +55,19 @@ function AddCompany() {
         placeholder="Date de debut de partenaria"
         onChange={(e) => setSinceCompany(e.target.value)}
       />
-      <button type="button">Annuler</button>
       <button
         type="button"
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
+          handlerComponentAdd();
+        }}
+      >
+        Annuler
+      </button>
+      <button
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
           postCompany();
         }}
       >
@@ -66,5 +76,7 @@ function AddCompany() {
     </form>
   );
 }
-
+AddCompany.propTypes = {
+  handlerComponentAdd: PropsTypes.func.isRequired,
+};
 export default AddCompany;

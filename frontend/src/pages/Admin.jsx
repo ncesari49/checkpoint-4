@@ -37,17 +37,11 @@ function Admin() {
         </div>
         <div className="containerList">
           {dataCompany.map((el) => {
-            return (
-              <CompanyList
-                key={el.id}
-                name={el.companyName}
-                handlerComponentAdd={handlerComponentAdd}
-              />
-            );
+            return <CompanyList key={el.id} id={el.id} name={el.companyName} />;
           })}
         </div>
       </div>
-      {componentAdd && <AddCompany />}
+      {componentAdd && <AddCompany handlerComponentAdd={handlerComponentAdd} />}
     </div>
   );
 }

@@ -11,10 +11,12 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .containerList {
   background-color: violet;
-  height: 60%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
