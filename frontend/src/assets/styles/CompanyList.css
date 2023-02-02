@@ -1,0 +1,10 @@
+.companyList {
+  background-color: aliceblue;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.companyList > * {
+  margin: 5px;
+}

@@ -3,6 +3,7 @@ import Company from "@pages/Company";
 import Product from "@pages/Product";
 import Admin from "@pages/Admin";
 import Header from "@components/Header";
+import Footer from "@components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

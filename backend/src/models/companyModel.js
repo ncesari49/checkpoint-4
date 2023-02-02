@@ -14,11 +14,20 @@ const update = (
   localisation,
   activity,
   imgCompany,
+  sinceCompany,
   id
 ) => {
   return db.query(
     "UPDATE company SET companyName=?, description=?, localisation=?, activity=?, imgCompany=?, sinceCompany=? WHERE id=?",
-    [companyName, description, localisation, activity, imgCompany, id]
+    [
+      companyName,
+      description,
+      localisation,
+      activity,
+      imgCompany,
+      sinceCompany,
+      id,
+    ]
   );
 };
 
@@ -27,11 +36,12 @@ const create = (
   description,
   localisation,
   activity,
-  imgCompany
+  imgCompany,
+  sinceCompany
 ) => {
   return db.query(
-    "INSERT INTO company companyName, description, localisation, activity, imgCompany VALUES (?, ?, ?, ?, ?)",
-    [companyName, description, localisation, activity, imgCompany]
+    "INSERT INTO company (companyName, description, localisation, activity, imgCompany, sinceCompany) VALUES (?, ?, ?, ?, ?, ?)",
+    [companyName, description, localisation, activity, imgCompany, sinceCompany]
   );
 };
 

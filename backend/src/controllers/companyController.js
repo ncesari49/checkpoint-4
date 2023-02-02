@@ -43,14 +43,21 @@ const update = async (req, res) => {
 
 const create = async (req, res) => {
   try {
-    const { companyName, description, localisation, activity, imgCompany } =
-      req.body;
+    const {
+      companyName,
+      description,
+      localisation,
+      activity,
+      imgCompany,
+      sinceCompany,
+    } = req.body;
     const [result] = await companyModel.create(
       companyName,
       description,
       localisation,
       activity,
-      imgCompany
+      imgCompany,
+      sinceCompany
     );
     if (result.affectedRows) {
       return res.status(201).send(result);
