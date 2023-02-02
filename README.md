@@ -5,6 +5,8 @@ It's pre-configured with a set of tools which'll help students produce industry-
 
 ## Setup & Use
 
+- THERE IS NO DATA IN THE DATABASE
+
 ### Project Initialization
 
 - In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
