@@ -1,0 +1,55 @@
+.companyCards {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(246, 246, 246);
+  box-shadow: 1px 1px 4px 4px rgba(130, 217, 130, 0.2);
+  width: calc(100% - 100px);
+  border-radius: 15px;
+  min-height: 200px;
+  margin-top: 20px;
+  font-size: var(--fontsize);
+}
+
+.titleActivitySinceDesc {
+  width: 75%;
+  padding: 10px;
+  /* background-color: rgba(143, 143, 237, 0.992); */
+  display: flex;
+  flex-direction: column;
+}
+
+.titleActivitySince {
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titleActivity {
+  display: flex;
+  flex-direction: row;
+}
+
+.titleActivity > p {
+  padding-top: 10px;
+}
+
+.sinceCompany {
+  /* background-color: brown; */
+  /* width: 25%; */
+  padding-top: 10px;
+}
+
+.companyCards:hover {
+  cursor: pointer;
+}
+
+.conatainerImgCompanyCard {
+  width: 25%;
+  background-color: rgb(223, 221, 134);
+}
+
+.conatainerImgCompanyCard img {
+  height: 100%;
+}
